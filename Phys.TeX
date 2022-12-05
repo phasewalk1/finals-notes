@@ -1,0 +1,167 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Two Column Colour Article
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to howtotex.com.
+% Date: Feb 2011
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use overleaf.com: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% adaptions made by wolfgang stoettner mail@stoettner.net
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Preamble
+\documentclass[	DIV=calc,%
+							paper=a4,%
+							fontsize=11pt,%
+							twocolumn]{scrartcl} % KOMA-article class
+
+\usepackage{lipsum}	% Package to create dummy text
+\usepackage[english]{babel}	% English language/hyphenation
+\usepackage[protrusion=true,expansion=true]{microtype}	% Better typography
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx} % Enable pdflatex
+\usepackage{wrapfig} % enable figure wrapping
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats
+\usepackage{epstopdf} % Converts .eps to .pdf
+\usepackage{xcolor, soul}
+\usepackage{subfig}	% Subfigures
+\usepackage{booktabs} % Nicer tables
+\usepackage{fix-cm}	% Custom fontsizes
+\usepackage{booktabs} % prof. looking tables (www.en.wikibooks.org/wiki/LaTeX/Tables#Professional_tables)
+
+%%% Custom sectioning (sectsty package)
+\usepackage{sectsty} % Custom sectioning (see below)
+\allsectionsfont{%		% Change font of al section commands
+	\usefont{OT1}{phv}{b}{n}%	% bch-b-n: CharterBT-Bold font
+	}
+
+\sectionfont{%		% Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%	% bch-b-n: CharterBT-Bold font
+	}
+
+
+%%% Headers and footers
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+	\pagestyle{fancy} % Enabling the custom headers/footers
+\usepackage{lastpage}	
+
+% Header (empty)
+\lhead{}
+\chead{}
+% Footer (you may change this to your own needs)
+\lfoot{\footnotesize \texttt{PHYS-129 Final Notes: Anne Gallucci}}
+\cfoot{}
+\rfoot{\footnotesize page \thepage\ of \pageref{LastPage}}	% "Page 1 of 2"
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\hformbar}[1]{\vspace{5pt}\hrule\vspace{10pt}} % creates a horizontal bar to separate formulae better; space adaptions can be made centrally here
+
+%%% a primed vector
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+%%% Creating an initial of the very first character of the content
+\usepackage{lettrine}
+\newcommand{\initial}[1]{%
+     \lettrine[lines=3,lhang=0.3,nindent=0em]{
+     				\color{DarkGoldenrod}
+     				{\textsf{#1}}}{}}
+
+%%% Title, author and date metadata
+\usepackage{titling} % For custom titles
+
+\newcommand{\HorRule}{\color{DarkGoldenrod}%	% Creating a horizontal rule
+									  	\rule{\linewidth}{1pt}%
+										}
+
+\date{\today} % No date
+
+%%% wws: create a non-indented formula name
+\newcommand{\formdesc}[1]{\noindent\textbf{#1}}
+
+
+
+%%% Begin document -----------------------------------------------------------------
+\begin{document}
+\thispagestyle{fancy} 	% Enabling the custom headers/footers for the first page 
+\hspace{10pt}
+
+%%% BEGIN MOMENTUM SECTION ------------------------------------------------------------
+\sethlcolor{magenta}
+\formdesc{\hl{Momentum}}
+\begin{equation}
+    \vec p = m\vec v
+\end{equation}
+\textbf{Newton's Second Law refactored for momentum}:
+\begin{equation}
+    \sum \vec F = \frac{d\vec p}{dt}, \qquad \frac{d\vec p}{dt}(m)+\frac{d}{dt}(\vec v)
+\end{equation}
+\textbf{Impulse}:
+\begin{equation}
+    \vec J = \int\vec F \ dt \
+\end{equation}
+\textbf{Conservation of Momentum}:
+\begin{equation}
+    m_A\vec v_A + m_B\vec v_B = m_A\pvec{v}'_A+m_B\pvec{v}'_B
+\end{equation}
+%%% MOMENTUM CONSTRAINTS
+\sethlcolor{yellow}
+\hl{\textbf{where}}: Collision is quick, i.e., $\sum\vec F_{ext}=0$
+\hformbar{}
+%%% MOMENTUM TRICKS
+\sethlcolor{lime}
+\hl{\textbf{Tricks}}
+\begin{enumerate}
+    \item Where $A$ has $x$ times the mass as $B$ and kinetic after energy $K^\prime_A$, then $K^\prime_B=xK^\prime_A$
+\end{enumerate}
+
+\hformbar{}
+\hformbar{}
+%%% END MOMETUM SECTION ---------------------------------------------------------------
+
+%%% MISC. SECTION ---------------------------------------------------------------------
+\sethlcolor{magenta}{\formdesc{\hl{Misc.}}}
+
+\textbf{Hookes Law}
+
+Where $k$ is the spring's constant and $x$ its displ.:
+\begin{equation}
+    F_s = -kx
+\end{equation}
+
+\textbf{Collision Types}:
+        
+        \qquad\textbf{Elastic}: $\sum K = \sum K^\prime$  
+        
+        \qquad\textbf{Inelastic}: $\sum K\ne\sum K^\prime$
+            
+            \qquad\qquad Explosive: $\sum K^\prime > \sum K$
+
+            \qquad\qquad Sticky: $\sum K^\prime < \sum K$
+
+            \qquad\qquad Completely inelastic: $\vec p = (m_A+m_B)\pvec{v}$
+
+\textbf{Nonconservative Forces}
+
+\quad The total energy of a system $E_\text{sys}$ is not conserved if nonconservative       forces do work, ($W_{\text{NC}} = 0$). Below are examples of common, nonconservative forces
+\begin{itemize}
+    \item Friction
+    \item Drag
+    \item Tension
+\end{itemize}
+        
+    \hformbar{}
+    \end{document}
