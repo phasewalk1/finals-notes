@@ -137,6 +137,11 @@ Finding an angle between two vectors:
 \begin{equation}
     \cos\theta = \frac{\vec A \cdot \vec B}{AB}
 \end{equation}
+
+Dotting a vector against itself
+\begin{equation}
+    \vec A\cdot\vec A = A^2
+\end{equation}
 \hformbar{}
 
 %%% CONDITIONS ---------------------------------------------------------
@@ -155,9 +160,17 @@ Finding an angle between two vectors:
 \hformbar{}
 
 %%% PROJECTILE MOTION -----------------------------------------------------------------
-\formdesc{\hl{Projectile Motion}}
-\sethlcolor{red}
+\formdesc{\hl{Projectile Motion}}'
 
+\textbf{Applied Kine. in Proj. Mot.}
+\begin{equation}
+    \underbrace{x=x_0+v_{0x}t}_{a_x=0}
+\end{equation}
+\begin{equation}
+    \underbrace{y=y_0+v_{0y}t+\frac{1}{2}-at^2}_{a_y=-g\quad\text{commonly}}
+\end{equation}
+
+\sethlcolor{red}
 \textbf{\hl{ONLY IF}} $h_i\equiv h_f$
 
 Height $\rightarrow$\begin{equation}
@@ -249,12 +262,31 @@ Time $\rightarrow$\begin{equation}
 %%% MISC. SECTION ---------------------------------------------------------------------
 \sethlcolor{pink}{\formdesc{\hl{Misc.}}}
 
+\textbf{Keywords!}
+\begin{itemize}
+    \item \textbf{about}\newline\qquad Rotation around an axis (i.e., about the CM)
+    \item \textbf{smooth}\newline\qquad Without kinetic friction (i.e., $f_k=0$)
+    \item \textbf{isolated}\newline\qquad No external forces (i.e., $F_\text{ext}=0$
+    \item \textbf{mechanical equilibrium}\newline\qquad No net forces acting on a body (i.e., $\sum\vec F=0$)
+    \item \textbf{elastic/inelastic}\newline\qquad $$\text{elastic}\implies\sum p\equiv\sum p^\prime,\qquad\sum K\equiv\sum K^\prime$$
+    $$\text{inelastic}\implies\sum p\equiv\sum p^\prime,\qquad\sum K\not\equiv\sum K^\prime$$
+    $$\text{completely inel.}\implies\vec p=(m_A+m_B+...+m_N)\vec v$$
+\end{itemize}
+
 \textbf{Hooke's Law}
 
 Where $k$ is the spring's constant and $x$ its displ.:
 \begin{equation}
     F_s = -kx
 \end{equation}
+
+A spring can either push (when compressed) or 
+
+pull (when stretched). Any object that deforms 
+
+elastically under stress will exert a "spring" 
+
+or elastic force $\vec F_\text{s}$. 
 
 \textbf{Power}
 \begin{enumerate}
@@ -263,20 +295,22 @@ Where $k$ is the spring's constant and $x$ its displ.:
 \end{enumerate}
 
 \textbf{Collision Types}:
-        
-        \qquad\textbf{Elastic}: $\sum K = \sum K^\prime$  
-        
-        \qquad\textbf{Inelastic}: $\sum K\ne\sum K^\prime$
-            
-            \qquad\qquad Explosive: $\sum K^\prime > \sum K$
 
-            \qquad\qquad Sticky: $\sum K^\prime < \sum K$
+\qquad Explosive: $\sum K^\prime > \sum K$
 
-            \qquad\qquad Completely inelastic: $\vec p = (m_A+m_B)\pvec{v}$
+\qquad Sticky: $\sum K^\prime < \sum K$
+
+\qquad Completely inelastic: $\vec p = (m_A+m_B)\pvec{v}$
 
 \textbf{Nonconservative Forces}
 
-\quad The total energy of a system $E_\text{sys}$ is not conserved if nonconservative       forces do work, ($W_{\text{NC}}\ne 0$). Below are examples of common, nonconservative forces
+The total energy of a system $E_\text{sys}$ is not 
+
+conserved if nonconservative forces do work, 
+
+($W_{\text{NC}}\ne 0$). Below are examples of common, 
+
+nonconservative forces
 \begin{itemize}
     \item Friction
     \item Drag
