@@ -42,6 +42,7 @@
 \usepackage{booktabs} % Nicer tables
 \usepackage{fix-cm}	% Custom fontsizes
 \usepackage{booktabs} % prof. looking tables (www.en.wikibooks.org/wiki/LaTeX/Tables#Professional_tables)
+\usepackage{amssymb}
 
 %%% Custom sectioning (sectsty package)
 \usepackage{sectsty} % Custom sectioning (see below)
@@ -99,26 +100,110 @@
 \thispagestyle{fancy} 	% Enabling the custom headers/footers for the first page 
 \hspace{10pt}
 
+%%% LOGIC & PHILOSOPHY OF SCIENCE STUFF -----------------------------------------------
+\sethlcolor{pink}
+\formdesc{\hl{Logic, Scientific Philosophy}}
+
+\textbf{Formal Logic Notation}
+\begin{enumerate}
+    \item $\neg\quad\text{or}\quad\sim$
+        Denotes logical \textbf{NOT}
+    \item $\land\qquad\qquad$
+        Denotes logical \textbf{AND}
+    \item $\lor\qquad\qquad$
+        Denotes logical \textbf{OR}
+    \item $\therefore\qquad\qquad$
+        Denotes \textbf{therefore}
+    \item $p\rightarrow q$\qquad \  Denotes a \textbf{conditional}
+    \item $q\rightarrow p$\qquad \ Denotes a \textbf{converse}
+    \item $\neg p\rightarrow\neg q$\quad Denotes a \textbf{inverse}
+    \item $\neg q\rightarrow\neg p$\quad Denotes a \textbf{contrapositive}
+    \item $p\iff q$\quad Denotes a \textbf{biconditional}
+\end{enumerate}
+
+\hformbar{}
+
+%%% JUST VECTOR THINGS ----------------------------------------------------------------
+
+\sethlcolor{pink}
+\formdesc{\hl{Vectors}}
+
+The magnitude of a vector:
+\begin{equation}
+    v = \sqrt{v_x^2 + v_y^2 + ... + v_n^2}
+\end{equation}
+
+Finding an angle between two vectors:
+\begin{equation}
+    \cos\theta = \frac{\vec A \cdot \vec B}{AB}
+\end{equation}
+\hformbar{}
+
+%%% CONDITIONS ---------------------------------------------------------
+\formdesc{\hl{Constraints (Can I use this?)}}
+
+\textbf{Is Energy Conserved?}
+\begin{itemize}
+    \item Energy is conserved if \textbf{$W_{NC}=0$}
+\end{itemize}
+
+\textbf{Is Momentum Conserved?}
+\begin{itemize}
+    \item Linear momentum is conserved if \textbf{no net external force} acts on the object
+    \item Angular Momentum is conserved if \textbf{no external torque }acts on the object
+\end{itemize}
+\hformbar{}
+
+%%% PROJECTILE MOTION -----------------------------------------------------------------
+\formdesc{\hl{Projectile Motion}}
+\sethlcolor{red}
+
+\textbf{\hl{ONLY IF}} $h_i\equiv h_f$
+
+Height $\rightarrow$\begin{equation}
+    H = \frac{v_0^2\sin^2\theta}{2g}
+\end{equation}
+
+Range $\rightarrow$\begin{equation}
+     R = \frac{v_0^2\sin{2\theta}}{g}
+\end{equation}
+
+Time $\rightarrow$\begin{equation}
+    T = \frac{2v_0\sin\theta}{g}
+\end{equation}
+\hformbar{}
+
 %%% BEGIN MOMENTUM SECTION ------------------------------------------------------------
-\sethlcolor{magenta}
+\sethlcolor{pink}
 \formdesc{\hl{Momentum}}
+
+\textbf{Linear}:
 \begin{equation}
     \vec p = m\vec v
 \end{equation}
-\textbf{Newton's Second Law refactored for momentum}:
+
+\textbf{Angular}:
+\begin{equation}
+    \vec L = I\vec\omega
+\end{equation}
+
+\textbf{2nd Law with Momentum}:
 \begin{equation}
     \sum \vec F = \frac{d\vec p}{dt}, \qquad \frac{d\vec p}{dt}(m)+\frac{d}{dt}(\vec v)
 \end{equation}
+
 \textbf{Impulse}:
 \begin{equation}
     \vec J = \int\vec F \ dt \
 \end{equation}
+
 \textbf{Conservation of Momentum}:
 \begin{equation}
     m_A\vec v_A + m_B\vec v_B = m_A\pvec{v}'_A+m_B\pvec{v}'_B
 \end{equation}
 %%% MOMENTUM CONSTRAINTS
 \sethlcolor{yellow}
+
 \hl{\textbf{where}}: Collision is quick, i.e., $\sum\vec F_{ext}=0$
 \hformbar{}
 %%% MOMENTUM TRICKS
@@ -132,15 +217,50 @@
 \hformbar{}
 %%% END MOMETUM SECTION ---------------------------------------------------------------
 
-%%% MISC. SECTION ---------------------------------------------------------------------
-\sethlcolor{magenta}{\formdesc{\hl{Misc.}}}
+%%% Rotational Dynamics ------------------------------------------------
+\sethlcolor{pink}
+\formdesc{\hl{Rotational Dynamics}}
 
-\textbf{Hookes Law}
+\textbf{Torques}
+\begin{equation}
+    \tau = rF\sin\phi
+\end{equation}
+
+\textbf{Work with Rotational Energy}
+\begin{equation}
+    W=\tau\Delta\theta
+\end{equation}
+
+\textbf{Energy of a Rotating Object}
+\begin{equation}
+    K_{\text{rot}}=\frac{1}{2}I\omega^2
+\end{equation}
+
+\textbf{2nd Law with Rotational Dynamics}
+\begin{equation}
+    \sum\vec\tau=I\vec\alpha,\qquad\alpha=\frac{\tau}{I}
+\end{equation}
+
+\textbf{Relating Rotational Variables}
+    $$F\iff\tau,\qquad  v\iff\omega$$
+    $$a\iff\alpha,\qquad p\iff L$$
+\hformbar{}
+
+%%% MISC. SECTION ---------------------------------------------------------------------
+\sethlcolor{pink}{\formdesc{\hl{Misc.}}}
+
+\textbf{Hooke's Law}
 
 Where $k$ is the spring's constant and $x$ its displ.:
 \begin{equation}
     F_s = -kx
 \end{equation}
+
+\textbf{Power}
+\begin{enumerate}
+    \item Linear\qquad\qquad$P=\vec F\cdot\vec v$
+    \item Rotational\qquad$P=\vec\tau\cdot\vec\omega$
+\end{enumerate}
 
 \textbf{Collision Types}:
         
@@ -156,7 +276,7 @@ Where $k$ is the spring's constant and $x$ its displ.:
 
 \textbf{Nonconservative Forces}
 
-\quad The total energy of a system $E_\text{sys}$ is not conserved if nonconservative       forces do work, ($W_{\text{NC}} = 0$). Below are examples of common, nonconservative forces
+\quad The total energy of a system $E_\text{sys}$ is not conserved if nonconservative       forces do work, ($W_{\text{NC}}\ne 0$). Below are examples of common, nonconservative forces
 \begin{itemize}
     \item Friction
     \item Drag
