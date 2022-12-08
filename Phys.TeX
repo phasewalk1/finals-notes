@@ -99,6 +99,42 @@
 \begin{document}
 \thispagestyle{fancy} 	% Enabling the custom headers/footers for the first page 
 \hspace{10pt}
+%%% CONDITIONS ---------------------------------------------------------
+\sethlcolor{pink}
+
+\formdesc{\hl{Constraints (Can I use this?)}}
+
+\textbf{Is Energy Conserved?}
+\begin{itemize}
+    \item Energy is conserved if \textbf{$W_{NC}=0$}
+\end{itemize}
+
+\textbf{Is Momentum Conserved?}
+\begin{itemize}
+    \item Linear momentum is conserved if \textbf{no net external force} acts on the object
+    \item Angular Momentum is conserved if \textbf{no external torque }acts on the object
+\end{itemize}
+\hformbar{}
+%%% JUST VECTOR THINGS ----------------------------------------------------------------
+
+\sethlcolor{pink}
+\formdesc{\hl{Vectors}}
+
+The magnitude of a vector:
+\begin{equation}
+    v = \sqrt{v_x^2 + v_y^2 + ... + v_n^2}
+\end{equation}
+
+Finding an angle between two vectors:
+\begin{equation}
+    \cos\theta = \frac{\vec A \cdot \vec B}{AB}
+\end{equation}
+
+Dotting a vector against itself
+\begin{equation}
+    \vec A\cdot\vec A = A^2
+\end{equation}
+\hformbar{}
 
 %%% LOGIC & PHILOSOPHY OF SCIENCE STUFF -----------------------------------------------
 \sethlcolor{pink}
@@ -123,44 +159,8 @@
 
 \hformbar{}
 
-%%% JUST VECTOR THINGS ----------------------------------------------------------------
-
-\sethlcolor{pink}
-\formdesc{\hl{Vectors}}
-
-The magnitude of a vector:
-\begin{equation}
-    v = \sqrt{v_x^2 + v_y^2 + ... + v_n^2}
-\end{equation}
-
-Finding an angle between two vectors:
-\begin{equation}
-    \cos\theta = \frac{\vec A \cdot \vec B}{AB}
-\end{equation}
-
-Dotting a vector against itself
-\begin{equation}
-    \vec A\cdot\vec A = A^2
-\end{equation}
-\hformbar{}
-
-%%% CONDITIONS ---------------------------------------------------------
-\formdesc{\hl{Constraints (Can I use this?)}}
-
-\textbf{Is Energy Conserved?}
-\begin{itemize}
-    \item Energy is conserved if \textbf{$W_{NC}=0$}
-\end{itemize}
-
-\textbf{Is Momentum Conserved?}
-\begin{itemize}
-    \item Linear momentum is conserved if \textbf{no net external force} acts on the object
-    \item Angular Momentum is conserved if \textbf{no external torque }acts on the object
-\end{itemize}
-\hformbar{}
-
 %%% PROJECTILE MOTION -----------------------------------------------------------------
-\formdesc{\hl{Projectile Motion}}'
+\formdesc{\hl{Projectile Motion}}
 
 \textbf{Applied Kine. in Proj. Mot.}
 \begin{equation}
@@ -168,6 +168,10 @@ Dotting a vector against itself
 \end{equation}
 \begin{equation}
     \underbrace{y=y_0+v_{0y}t+\frac{1}{2}-at^2}_{a_y=-g\quad\text{commonly}}
+\end{equation}
+
+\begin{equation}
+    v_{0x}\iff v\cos\theta,\qquad v_{0y}\iff v\sin\theta
 \end{equation}
 
 \sethlcolor{red}
@@ -186,6 +190,25 @@ Time $\rightarrow$\begin{equation}
 \end{equation}
 \hformbar{}
 
+%%% CIRCULAR MOTION -------------------------------------------------------------------
+\sethlcolor{pink}
+\formdesc{\hl{(Non)/Uniform Circular Motion}}
+
+\textbf{Centripetal Acceleration (Radially Inward)}
+\begin{equation}
+    a_c=\frac{v^2}{r}=\omega^2r
+\end{equation}
+
+\textbf{Tangential Acceleration}
+\begin{equation}
+    a_{\text{tan}}=r\alpha
+\end{equation}
+
+\textbf{Total Acceleration}
+\begin{equation}
+    \vec{a}=\vec a_c+\vec a_t
+\end{equation}
+
 %%% BEGIN MOMENTUM SECTION ------------------------------------------------------------
 \sethlcolor{pink}
 \formdesc{\hl{Momentum}}
@@ -197,7 +220,7 @@ Time $\rightarrow$\begin{equation}
 
 \textbf{Angular}:
 \begin{equation}
-    \vec L = I\vec\omega
+    L = I\omega=rp\sin\phi,\qquad\vec L = \vec r \cdot\vec p
 \end{equation}
 
 \textbf{2nd Law with Momentum}:
@@ -262,6 +285,11 @@ Time $\rightarrow$\begin{equation}
 %%% MISC. SECTION ---------------------------------------------------------------------
 \sethlcolor{pink}{\formdesc{\hl{Misc.}}}
 
+\textbf{Nice Conversions}
+\begin{equation}
+    \underbrace{\text{rad/s}\iff\text{rpm}}_{9.549297}
+\end{equation}
+
 \textbf{Keywords!}
 \begin{itemize}
     \item \textbf{about}\newline\qquad Rotation around an axis (i.e., about the CM)
@@ -278,6 +306,11 @@ Time $\rightarrow$\begin{equation}
 Where $k$ is the spring's constant and $x$ its displ.:
 \begin{equation}
     F_s = -kx
+\end{equation}
+
+\textbf{Potential Elastic Energy}
+\begin{equation}
+    U_s=\frac{1}{2}kx^2
 \end{equation}
 
 A spring can either push (when compressed) or 
@@ -316,6 +349,22 @@ nonconservative forces
     \item Drag
     \item Tension
 \end{itemize}
-        
-    \hformbar{}
-    \end{document}
+\hformbar{}
+
+%%% ESOTERIC PROBLEMS ---------------------------------------------------------------------------
+\formdesc{Esoteric (and) or Common Problems}
+
+\textbf{Banked Curve}
+$$f_s=mg\sin\theta-\frac{mv^2}{r}\cos\theta,\qquad N=mg\cos\theta+\frac{mv^2}{r}\sin\theta$$
+$$v\ge\sqrt{rg\frac{\sin\theta-\mu_s\cos\theta}{\mu_s\sin\theta+\cos\theta}},\qquad v\le\sqrt{rg\frac{\sin\theta+\mu_s\cos\theta}{\cos\theta-\mu_s\sin\theta}}$$
+
+\textbf{Conical Pendulum}
+$$r=l\sin\theta,\qquad v^2=lg\sin\theta\tan\theta$$
+$$\tan\theta=\frac{v^2}{rg},\qquad T(\text{period})=\frac{2\pi l\sin\theta}{\sqrt{lg\sin\theta\tan\theta}}$$
+
+\textbf{3-Blocks + Known-net Force}
+$$\sum F=(m_1+m_2+m_3)a\quad\rightarrow\quad\text{solve for a}$$
+\hformbar{}
+
+\textbf{}
+\end{document}
